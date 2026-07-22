@@ -1,0 +1,137 @@
+# Synthetic smoke-test configuration for WallPath-PI.
+#
+# Drives the end-to-end wiring check on the bundled synthetic data
+# (scripts/run_smoke_pipeline.sh). It is a pipeline check, NOT a source of paper
+# results. All paths are relative to the repository root. Keys are grouped by
+# stage: data location, synthetic generation, dataset/feature contract, split,
+# experiment identity, training, baselines, evaluation, and determinism.
+
+# Filesystem locations. data_root holds the dataset and its manifests;
+# results_root receives per-run output directories; the *_csv names are manifest
+# files resolved relative to data_root.
+paths:
+  data_root: ./data/sample_synthetic
+  results_root: ./results
+  train_csv: train_split.csv
+  val_csv: val_split.csv
+  eval_csv: val_split.csv
+
+# Parameters for scripts/generate_synthetic_data.py: scene/sample counts, raster
+# size in pixels, cell size in meters, transmit frequencies in Hz, and a fixed
+# seed for reproducible generation.
+synthetic:
+  num_scenes: 6
+  samples_per_scene: 2
+  image_size: 40
+  resolution_m: 0.25
+  frequencies_hz:
+  - 1800000000.0
+  - 3500000000.0
+  seed: 2026
+  overwrite: true
+
+# Dataset and feature contract. material_ids enumerate wall classes; the dB clip
+# range bounds valid path loss; cache_features toggles base-map caching; the
+# feature_set flags select which feature families enter the learned models.
+dataset:
+  material_ids:
+  - 1
+  - 2
+  - 3
+  min_distance_m: 0.25
+  clip_min_db: 13.0
+  clip_max_db: 160.0
+  treat_clip_max_as_clipped: true
+  cache_features: false
+  feature_set:
+    coordinate_features: true
+    raster_wall_features: true
+    material_features: true
+    sparse_anchor_features: true
+    baseline_prediction_features: true
+    k_nearest_anchors: 4
+    idw_power: 2.0
+    idw_eps: 1.0e-06
+
+# Scene-disjoint internal split. group_column keeps whole scenes on one side of
+# the train/val boundary; val_ratio is the validation group fraction; seed fixes
+# the deterministic shuffle.
+split:
+  group_column: scene_id
+  val_ratio: 0.25
+  seed: 42
+
+# Experiment identity. experiment_name names the results/<name>/run_* tree; seed
+# seeds NumPy and scikit-learn for reproducible training.
+experiment:
+  experiment_name: wallpath_pi_synthetic
+  seed: 42
+
+# Training plan. methods lists every model to fit (baselines plus residual
+# forests); primary_method is the headline model; sparse_rates/sparse_seeds
+# define the anchor-sampling sweep; min_anchors floors anchors per sample;
+# max_train_points_per_sample caps pixels per sample; model_params hold the
+# forest hyper-parameters.
+train:
+  methods:
+  - fspl
+  - log_distance
+  - multi_wall
+  - idw
+  - multi_wall_residual_idw
+  - direct_rf
+  - wallpath_rf
+  - wallpath_extra
+  primary_method: wallpath_rf
+  sparse_rates:
+  - 0.05
+  sparse_seeds:
+  - 11
+  min_anchors: 16
+  max_train_points_per_sample: 500
+  baseline_ridge_alpha: 1.0e-06
+  model_params:
+    random_forest:
+      n_estimators: 20
+      max_depth: 12
+      min_samples_leaf: 2
+      n_jobs: 1
+    extra_trees:
+      n_estimators: 30
+      max_depth: 14
+      min_samples_leaf: 2
+      n_jobs: 1
+
+# Propagation-baseline parameters: log-distance reference distance d0_m and the
+# inverse-distance-weighting power/epsilon used by IDW infilling.
+baseline:
+  d0_m: 1.0
+  idw_power: 2.0
+  idw_eps: 1.0e-06
+
+# Evaluation settings. metrics lists reported error statistics;
+# high_wall_count_threshold defines the high-wall NLOS regime; export_npz saves
+# per-sample prediction arrays; primary_sparse_* pick the headline operating
+# point; bootstrap_* configure the confidence-interval resampling.
+evaluation:
+  metrics:
+  - rmse
+  - mae
+  - median_ae
+  - p90_ae
+  - los_rmse
+  - nlos_rmse
+  - high_wall_rmse
+  - unclipped_rmse
+  high_wall_count_threshold: 2
+  export_npz: true
+  primary_sparse_rate: 0.05
+  primary_sparse_seed: 11
+  bootstrap_iterations: 100
+  bootstrap_confidence: 0.95
+
+# Runtime determinism. deterministic forces reproducible math; num_threads pins
+# thread counts so results do not vary with hardware parallelism.
+system:
+  deterministic: true
+  num_threads: 1
