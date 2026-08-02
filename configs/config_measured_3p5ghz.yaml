@@ -1,0 +1,38 @@
+# Configuration for optional point-level validation on the 2026 measured
+# 3.5 GHz indoor path-loss dataset. This is standalone (read directly by
+# scripts/analysis/evaluate_measured_3p5ghz.py) and is intentionally NOT part of
+# the dense radio-map pipeline. All paths are relative to the repository root.
+input_csv: ./data/measured_3p5ghz_processed/measured_points.csv
+out_dir: ./results/measured_3p5ghz_validation
+
+# Grouped cross-validation keeps each scenario/campaign on one side of every
+# fold, so reported metrics are leakage-safe. The fallback is used only when the
+# primary grouping column has fewer than two unique values.
+group_column: scenario
+fallback_group_column: campaign_id
+n_splits: 5
+seed: 42
+
+# Column names in measured_points.csv (snake_case from the converter).
+target_column: measured_path_loss_db
+distance_column: distance_m
+frequency_column: frequency_hz
+frequency_hz_default: 3.5e9
+los_column: los_nlos
+wall_count_columns:
+  - brick_wall_count
+  - wood_wall_count
+  - glass_wall_count
+  - drywall_count
+  - column_count
+
+high_wall_count_threshold: 2
+make_plots: true
+
+# Forest hyper-parameters shared by the direct and residual point models.
+model_params:
+  use_extra_trees: false
+  n_estimators: 300
+  max_depth: 16
+  min_samples_leaf: 2
+  n_jobs: -1
