@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{External measured 3.5~GHz leave-scenario-out few-shot pooled RMSE (dB) on non-anchor target observations. Values are mean $\pm$ standard deviation across anchor-selection seeds 11, 22, and 33 with model seed fixed at 11; lower is better.}
+\label{tab:external-fewshot-rmse}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccc}
+\toprule
+Method & 1\% anchors & 5\% anchors & 10\% anchors \\
+\midrule
+WallPath-PI + anchors & 9.857 $\pm$ 0.072 & 8.246 $\pm$ 0.323 & 7.539 $\pm$ 0.064 \\
+WallPath-RF + anchors & 9.834 $\pm$ 0.168 & 8.294 $\pm$ 0.272 & 7.590 $\pm$ 0.041 \\
+Direct RF + anchors & 9.293 $\pm$ 0.260 & 8.047 $\pm$ 0.287 & 7.557 $\pm$ 0.093 \\
+Direct ExtraTrees + anchors & 9.044 $\pm$ 0.191 & \textbf{7.882 $\pm$ 0.203} & \textbf{7.432 $\pm$ 0.062} \\
+Bias-calibrated multi-wall & \textbf{9.036 $\pm$ 0.549} & 8.345 $\pm$ 0.011 & 8.275 $\pm$ 0.048 \\
+Bias-calibrated log-distance & 9.203 $\pm$ 0.197 & 8.487 $\pm$ 0.106 & 8.482 $\pm$ 0.134 \\
+Multi-wall (zero-shot) & 10.083 $\pm$ 0.005 & 10.067 $\pm$ 0.046 & 10.068 $\pm$ 0.034 \\
+Log-distance (zero-shot) & 14.974 $\pm$ 0.012 & 15.013 $\pm$ 0.001 & 14.974 $\pm$ 0.083 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

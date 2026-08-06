@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{External measured 3.5~GHz pointwise RMSE (dB). Values are mean $\pm$ standard deviation across seeds 11, 22, and 33; lower is better. Pooled metrics weight measured points equally, whereas the scenario macro metric weights the three held-out scenarios equally.}
+\label{tab:external-grouped-rmse}
+\setlength{\tabcolsep}{5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+& Random & Leave-configuration & \multicolumn{2}{c}{Leave-scenario} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-5}
+Method & Pooled & Pooled & Pooled & Macro \\
+\midrule
+WallPath-PI & 6.493 $\pm$ 0.124 & 7.040 $\pm$ 0.006 & 10.957 $\pm$ 0.010 & 10.820 $\pm$ 0.005 \\
+WallPath-RF & 6.450 $\pm$ 0.117 & \textbf{6.974 $\pm$ 0.005} & 11.100 $\pm$ 0.050 & 10.877 $\pm$ 0.041 \\
+Direct RF & \textbf{6.364 $\pm$ 0.195} & 7.097 $\pm$ 0.006 & 10.892 $\pm$ 0.059 & 10.948 $\pm$ 0.050 \\
+Direct ExtraTrees & 6.643 $\pm$ 0.174 & 7.148 $\pm$ 0.005 & 11.143 $\pm$ 0.043 & 10.932 $\pm$ 0.040 \\
+Multi-wall & 7.059 $\pm$ 0.119 & 7.383 $\pm$ 0.000 & \textbf{10.083 $\pm$ 0.000} & \textbf{10.185 $\pm$ 0.000} \\
+Log-distance & 9.997 $\pm$ 0.179 & 10.149 $\pm$ 0.000 & 14.995 $\pm$ 0.000 & 12.890 $\pm$ 0.000 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

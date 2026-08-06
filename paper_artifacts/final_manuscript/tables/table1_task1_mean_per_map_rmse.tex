@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Task~1 scene-disjoint mean per-map RMSE (dB) on held-out buildings B21--B25. Values are mean $\pm$ standard deviation across sparse-anchor seeds 11, 22, and 33; lower is better. The best result at each sparse rate is shown in bold.}
+\label{tab:task1-rmse}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Method & 0.005 & 0.010 & 0.050 & 0.100 \\
+\midrule
+WallPath-PI & 3.328 $\pm$ 0.015 & 2.967 $\pm$ 0.008 & 2.249 $\pm$ 0.007 & 1.951 $\pm$ 0.003 \\
+Direct RF & 3.222 $\pm$ 0.013 & 2.890 $\pm$ 0.009 & 2.228 $\pm$ 0.008 & 1.949 $\pm$ 0.001 \\
+Direct ExtraTrees & \textbf{3.205 $\pm$ 0.017} & \textbf{2.878 $\pm$ 0.015} & \textbf{2.214 $\pm$ 0.006} & \textbf{1.938 $\pm$ 0.002} \\
+Multi-wall residual-IDW & 4.094 $\pm$ 0.031 & 3.681 $\pm$ 0.022 & 2.987 $\pm$ 0.011 & 2.748 $\pm$ 0.005 \\
+IDW & 4.774 $\pm$ 0.006 & 4.244 $\pm$ 0.015 & 3.371 $\pm$ 0.005 & 3.079 $\pm$ 0.003 \\
+Multi-wall & 6.059 $\pm$ 0.010 & 5.954 $\pm$ 0.009 & 5.870 $\pm$ 0.001 & 5.861 $\pm$ 0.000 \\
+Log-distance & 7.502 $\pm$ 0.003 & 7.468 $\pm$ 0.001 & 7.444 $\pm$ 0.000 & 7.442 $\pm$ 0.000 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
