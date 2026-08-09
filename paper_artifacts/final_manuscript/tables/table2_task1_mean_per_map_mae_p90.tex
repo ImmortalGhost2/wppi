@@ -1,0 +1,30 @@
+\begin{table*}[t]
+\centering
+\caption{Task~1 scene-disjoint mean per-map MAE and P90 absolute error (dB) on held-out buildings B21--B25. Values are mean $\pm$ standard deviation across sparse-anchor seeds 11, 22, and 33; lower is better. The best result for each metric and sparse rate is shown in bold.}
+\label{tab:task1-mae-p90}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+Method & 0.005 & 0.010 & 0.050 & 0.100 \\
+\midrule
+\multicolumn{5}{l}{\textit{MAE}} \\
+WallPath-PI & 2.228 $\pm$ 0.002 & 1.921 $\pm$ 0.006 & \textbf{1.324 $\pm$ 0.003} & \textbf{1.084 $\pm$ 0.001} \\
+Direct RF & \textbf{2.156 $\pm$ 0.006} & \textbf{1.898 $\pm$ 0.004} & 1.369 $\pm$ 0.004 & 1.137 $\pm$ 0.002 \\
+Direct ExtraTrees & 2.168 $\pm$ 0.011 & 1.908 $\pm$ 0.010 & 1.395 $\pm$ 0.004 & 1.180 $\pm$ 0.004 \\
+Multi-wall residual-IDW & 2.734 $\pm$ 0.004 & 2.458 $\pm$ 0.004 & 1.985 $\pm$ 0.005 & 1.796 $\pm$ 0.000 \\
+IDW & 3.511 $\pm$ 0.001 & 3.119 $\pm$ 0.005 & 2.470 $\pm$ 0.003 & 2.224 $\pm$ 0.003 \\
+Multi-wall & 4.596 $\pm$ 0.011 & 4.559 $\pm$ 0.003 & 4.545 $\pm$ 0.003 & 4.544 $\pm$ 0.002 \\
+Log-distance & 6.029 $\pm$ 0.002 & 6.009 $\pm$ 0.004 & 5.993 $\pm$ 0.001 & 5.991 $\pm$ 0.001 \\
+\midrule
+\multicolumn{5}{l}{\textit{P90 absolute error}} \\
+WallPath-PI & 5.422 $\pm$ 0.009 & 4.808 $\pm$ 0.016 & \textbf{3.480 $\pm$ 0.006} & \textbf{2.906 $\pm$ 0.000} \\
+Direct RF & 5.357 $\pm$ 0.028 & \textbf{4.776 $\pm$ 0.016} & 3.527 $\pm$ 0.010 & 2.978 $\pm$ 0.007 \\
+Direct ExtraTrees & \textbf{5.355 $\pm$ 0.031} & 4.781 $\pm$ 0.030 & 3.553 $\pm$ 0.011 & 3.027 $\pm$ 0.010 \\
+Multi-wall residual-IDW & 6.147 $\pm$ 0.003 & 5.586 $\pm$ 0.019 & 4.578 $\pm$ 0.011 & 4.232 $\pm$ 0.003 \\
+IDW & 7.813 $\pm$ 0.014 & 6.938 $\pm$ 0.016 & 5.496 $\pm$ 0.008 & 5.038 $\pm$ 0.007 \\
+Multi-wall & 9.417 $\pm$ 0.019 & 9.372 $\pm$ 0.011 & 9.336 $\pm$ 0.019 & 9.343 $\pm$ 0.005 \\
+Log-distance & 12.172 $\pm$ 0.013 & 12.126 $\pm$ 0.003 & 12.095 $\pm$ 0.009 & 12.089 $\pm$ 0.004 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
