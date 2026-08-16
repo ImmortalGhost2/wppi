@@ -1,0 +1,29 @@
+======================================================================
+WallPath-PI leakage audit
+======================================================================
+Config      : C:\Users\Pankaj\WallPath-PI\configs\config_icassp2025_task1_final_sparse_seed11.yaml
+Data root   : C:\Users\Pankaj\WallPath-PI\data\icassp2025_indoor_converted_task1_full
+Group column: scene_id
+Mode        : QUICK (max_feature_pixels=2000)
+Samples     : train=1000 val=250 eval=250 (max_samples=50)
+Checked     : samples=50 feature_pixels=100000
+----------------------------------------------------------------------
+[PASS] 1. Train/val group disjointness
+        No 'scene_id' overlap between train (20) and val (5).
+[PASS] 2. Sparse anchors subset of valid_mask
+        All 50 checked sample(s) keep anchors within valid_mask.
+[PASS] 3. Sparse-anchor features independent of dense labels
+        Dense-label perturbation left the feature table unchanged on 50 sample(s).
+[PASS] 4. Dense labels feed only metric computation
+        Dense-label perturbation left all baselines unchanged on 50 sample(s).
+[PASS] 5. No NaN/Inf on valid training/eval pixels
+        All checked valid targets and feature rows are finite.
+[PASS] 6. Anchor counts >= min_anchors
+        Every sample reaches min_anchors=16 across 4 rate(s) x 1 seed(s).
+[PASS] 7. Eval sample_ids absent from training
+        None of 250 eval sample_id(s) appear among 1000 train sample_id(s).
+[PASS] 8. IDW empty-anchor fill ignores dense target mean
+        Empty-anchor IDW fills a caller constant, is invariant to dense values, and supports on_empty='raise'.
+----------------------------------------------------------------------
+OVERALL: PASS
+======================================================================

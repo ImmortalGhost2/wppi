@@ -1,0 +1,7 @@
+task,expected_seed,run_directory,evaluated_sparse_seeds,observed_sparse_seeds,observed_sparse_rates,per_sample_rows,unique_maps,duplicate_rows,status_completed,summary_seed_correct,sample_seed_correct,sample_rate_correct,required_methods_present,expected_maps_for_required_methods,no_duplicate_method_map_seed_rows,audit_pass
+task2,11,results\transfer_task1_to_task2_final_seed11_r001,[11],[11],[0.01],8250,750,0,True,True,True,True,True,True,True,True
+task2,22,results\transfer_task1_to_task2_final_seed22_r001,[22],[22],[0.01],8250,750,0,True,True,True,True,True,True,True,True
+task2,33,results\transfer_task1_to_task2_final_seed33_r001,[33],[33],[0.01],8250,750,0,True,True,True,True,True,True,True,True
+task3,11,results\transfer_task1_to_task3_final_seed11_r001,[11],[11],[0.01],61050,5550,0,True,True,True,True,True,True,True,True
+task3,22,results\transfer_task1_to_task3_final_seed22_r001,[22],[22],[0.01],61050,5550,0,True,True,True,True,True,True,True,True
+task3,33,results\transfer_task1_to_task3_final_seed33_r001,[33],[33],[0.01],61050,5550,0,True,True,True,True,True,True,True,True

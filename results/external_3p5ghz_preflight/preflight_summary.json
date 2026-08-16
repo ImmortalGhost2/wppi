@@ -1,0 +1,39 @@
+{
+  "data_root": "C:\\Users\\Pankaj\\WallPath-PI\\data\\external\\3p5ghz_measured",
+  "expected_files": [
+    "PL_Comms_C1.csv",
+    "PL_Comms_C2.csv",
+    "PL_Library_C1.csv",
+    "PL_Library_C2.csv",
+    "PL_SSE_C1.csv",
+    "PL_SSE_C2.csv"
+  ],
+  "actual_files": [
+    "PL_Comms_C1.csv",
+    "PL_Comms_C2.csv",
+    "PL_Library_C1.csv",
+    "PL_Library_C2.csv",
+    "PL_SSE_C1.csv",
+    "PL_SSE_C2.csv"
+  ],
+  "missing_expected_files": [],
+  "unexpected_pl_files": [],
+  "total_raw_rows": 2293,
+  "invalid_target_or_distance_rows": 3,
+  "known_anomaly_rows": 1,
+  "expected_rows_after_invalid_and_anomaly_removal": 2289,
+  "valid_rows_with_missing_wall_values": 1603,
+  "duplicate_coordinate_rows_within_files": 0,
+  "received_power_comparable_rows": 2290,
+  "received_power_mismatches": 0,
+  "scenario_counts_before_anomaly_removal": {
+    "Comms": 1389,
+    "Library": 687,
+    "SSE": 214
+  },
+  "config_counts_before_anomaly_removal": {
+    "C1": 1168,
+    "C2": 1122
+  },
+  "preflight_pass": true
+}

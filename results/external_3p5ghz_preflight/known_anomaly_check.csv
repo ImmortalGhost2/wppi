@@ -1,0 +1,2 @@
+scenario,config,source_file,coord,distance_m,pl_db,p_rx_dbm,derived_pl_db,pl_minus_derived_db
+Comms,C2,PL_Comms_C2.csv,C-36,7.380801108,-60.0,70.0,-60.0,0.0

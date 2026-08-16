@@ -1,0 +1,7 @@
+source_file,scenario,config,rows_raw,rows_valid_target_distance,rows_invalid_target_distance,rows_valid_with_missing_wall_values,duplicate_coord_rows,pl_min_db,pl_max_db,distance_min_m,distance_max_m
+PL_Comms_C1.csv,Comms,C1,719,718,1,718,0,51.0,123.0,1.0,30.08321791
+PL_Comms_C2.csv,Comms,C2,672,671,1,671,0,-60.0,123.0,1.573602555,30.10774361
+PL_Library_C1.csv,Library,C1,344,343,1,0,0,53.0,99.0,1.355,26.0287
+PL_Library_C2.csv,Library,C2,344,344,0,0,0,57.0,106.0,1.819958791,26.05704223
+PL_SSE_C1.csv,SSE,C1,107,107,0,107,0,52.0,115.0,1.0,15.8113883
+PL_SSE_C2.csv,SSE,C2,107,107,0,107,0,65.0,112.0,1.573602555,15.85800192

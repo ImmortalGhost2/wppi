@@ -1,0 +1,327 @@
+{
+  "experiment": "external_3p5ghz_measured_validation",
+  "random_seed": 33,
+  "dataset_files": [
+    "PL_Comms_C1.csv",
+    "PL_Comms_C2.csv",
+    "PL_Library_C1.csv",
+    "PL_Library_C2.csv",
+    "PL_SSE_C1.csv",
+    "PL_SSE_C2.csv"
+  ],
+  "file_fingerprints": [
+    {
+      "file": "PL_Comms_C1.csv",
+      "md5": "effda6f5c2cff5c8dff327b6c62c7b40",
+      "sha256": "d6c0ea81fd84a36a7d4925440915ff5ca5205c6bc8f4a6ca10320fc42845616a",
+      "rows": 719
+    },
+    {
+      "file": "PL_Comms_C2.csv",
+      "md5": "9e1f1206a1427a18e9b6e590af967d48",
+      "sha256": "0f20c39172703b6c0670370aa3fd6a9871af5c43fa1df873206c9ccbced2bad9",
+      "rows": 672
+    },
+    {
+      "file": "PL_Library_C1.csv",
+      "md5": "a3b5750619849cfdc7f9f115261267f2",
+      "sha256": "7929a47188f2a0f98ea237620bb91869efab8d7df382a70def3d7f82175c59be",
+      "rows": 344
+    },
+    {
+      "file": "PL_Library_C2.csv",
+      "md5": "d200e52ce0a6f0721040276e16351659",
+      "sha256": "4673acfcc3fc02c0aa92b21c8aed038b3853f6847e09eaa1cdc326a67ffd7492",
+      "rows": 344
+    },
+    {
+      "file": "PL_SSE_C1.csv",
+      "md5": "cd8c8d1dd39785d34853eb6da3cb2126",
+      "sha256": "35ca136f3423adfe5b4cc2171497c486ccf61ba8740b99280294d352a0a0b57a",
+      "rows": 107
+    },
+    {
+      "file": "PL_SSE_C2.csv",
+      "md5": "68935d4e524de7db6dd177f6293b8b0a",
+      "sha256": "7f0aec8c1cc36cd47fb6c2ebf7f3d7b253f0d7bec4babe4c176afe08d14a1768",
+      "rows": 107
+    }
+  ],
+  "rows_before_cleaning": 2293,
+  "rows_after_cleaning": 2288,
+  "rows_removed_total": 5,
+  "cleaning_policy": {
+    "invalid_target_or_distance": "drop",
+    "absent_elevator_column": "explicit_zero",
+    "missing_core_wall_count": "drop",
+    "known_anomaly": "drop_without_imputation"
+  },
+  "schema_defaults": [
+    {
+      "source_file": "PL_Comms_C1.csv",
+      "column": "elevator",
+      "default_value": 0.0,
+      "reason": "column_absent_in_source_schema"
+    },
+    {
+      "source_file": "PL_Comms_C2.csv",
+      "column": "elevator",
+      "default_value": 0.0,
+      "reason": "column_absent_in_source_schema"
+    },
+    {
+      "source_file": "PL_SSE_C1.csv",
+      "column": "elevator",
+      "default_value": 0.0,
+      "reason": "column_absent_in_source_schema"
+    },
+    {
+      "source_file": "PL_SSE_C2.csv",
+      "column": "elevator",
+      "default_value": 0.0,
+      "reason": "column_absent_in_source_schema"
+    }
+  ],
+  "scenario_counts_after_cleaning": {
+    "Comms": 1387,
+    "Library": 687,
+    "SSE": 214
+  },
+  "config_counts_after_cleaning": {
+    "C1": 1168,
+    "C2": 1120
+  },
+  "removed_rows": [
+    {
+      "reason": "missing_or_invalid_target_or_distance",
+      "count": 3,
+      "rows": [
+        {
+          "row_uid": "PL_Comms_C1.csv::<NA>",
+          "source_file": "PL_Comms_C1.csv",
+          "source_row": 718,
+          "coord": null,
+          "distance_m": NaN,
+          "pl_db": NaN
+        },
+        {
+          "row_uid": "PL_Comms_C2.csv::<NA>",
+          "source_file": "PL_Comms_C2.csv",
+          "source_row": 671,
+          "coord": null,
+          "distance_m": NaN,
+          "pl_db": NaN
+        },
+        {
+          "row_uid": "PL_Library_C1.csv::<NA>",
+          "source_file": "PL_Library_C1.csv",
+          "source_row": 343,
+          "coord": null,
+          "distance_m": NaN,
+          "pl_db": NaN
+        }
+      ]
+    },
+    {
+      "reason": "missing_structural_feature",
+      "count": 1,
+      "rows": [
+        {
+          "row_uid": "PL_Comms_C2.csv::P-19",
+          "source_file": "PL_Comms_C2.csv",
+          "source_row": 188,
+          "coord": "P-19",
+          "distance_m": 14.91563693,
+          "pl_db": 94.0,
+          "num_brick_wall": 2.0,
+          "num_wood_wall": 0.0,
+          "num_glass_wall": NaN,
+          "num_drywall": 0.0,
+          "num_column": 0.0,
+          "elevator": 0.0,
+          "missing_columns": "num_glass_wall"
+        }
+      ]
+    },
+    {
+      "reason": "known_physical_anomaly_removed",
+      "count": 1,
+      "rows": [
+        {
+          "row_uid": "PL_Comms_C2.csv::C-36",
+          "source_file": "PL_Comms_C2.csv",
+          "source_row": 384,
+          "coord": "C-36",
+          "distance_m": 7.380801108,
+          "pl_db": -60.0
+        }
+      ],
+      "note": "The PL and received-power source files are internally consistent with the same physically impossible value; there is no independent evidence for a corrected label."
+    }
+  ],
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.2",
+    "pandas": "2.3.3",
+    "timestamp_utc": "2026-07-11T05:09:47.426599+00:00"
+  },
+  "feature_columns": [
+    "log10_distance",
+    "distance_m",
+    "num_brick_wall",
+    "num_wood_wall",
+    "num_glass_wall",
+    "num_drywall",
+    "num_column",
+    "elevator",
+    "scenario_Comms",
+    "scenario_Library",
+    "scenario_SSE"
+  ],
+  "split": "leave_config_out",
+  "methods": [
+    "direct_extra",
+    "direct_rf",
+    "log_distance",
+    "multi_wall_linear",
+    "wallpath_residual_extra",
+    "wallpath_residual_rf"
+  ],
+  "primary_method": "wallpath_residual_extra",
+  "primary_split": "leave_config_out",
+  "best_method_by_fold": {
+    "holdout_C1": "wallpath_residual_rf",
+    "holdout_C2": "wallpath_residual_rf"
+  },
+  "aggregate": {
+    "direct_extra": {
+      "rmse_mean": 7.154193296207087,
+      "mae_mean": 5.71226440208553,
+      "p90_ae_mean": 11.672428570536475,
+      "rmse_std": 0.13531893996144806,
+      "mae_std": 0.07806240212433879,
+      "p90_ae_std": 0.4192535705364895
+    },
+    "direct_rf": {
+      "rmse_mean": 7.106386003703344,
+      "mae_mean": 5.6848325442915595,
+      "p90_ae_mean": 11.6281691468254,
+      "rmse_std": 0.11829942437235763,
+      "mae_std": 0.04802227403878989,
+      "p90_ae_std": 0.4137643849206585
+    },
+    "log_distance": {
+      "rmse_mean": 10.151046210937103,
+      "mae_mean": 8.367249137941407,
+      "p90_ae_mean": 16.400885133182676,
+      "rmse_std": 0.20912077671164297,
+      "mae_std": 0.3090060532075638,
+      "p90_ae_std": 0.14679815299051846
+    },
+    "multi_wall_linear": {
+      "rmse_mean": 7.381177082935418,
+      "mae_mean": 5.912999832590106,
+      "p90_ae_mean": 11.880726469674567,
+      "rmse_std": 0.3642048873440582,
+      "mae_std": 0.13646643196616637,
+      "p90_ae_std": 0.582891003171369
+    },
+    "wallpath_residual_extra": {
+      "rmse_mean": 7.044506945924527,
+      "mae_mean": 5.624758132385979,
+      "p90_ae_mean": 11.641116841860708,
+      "rmse_std": 0.1753427715427156,
+      "mae_std": 0.08295404461197897,
+      "p90_ae_std": 0.5478225006197777
+    },
+    "wallpath_residual_rf": {
+      "rmse_mean": 6.971785824299344,
+      "mae_mean": 5.571597573137598,
+      "p90_ae_mean": 11.296061019527006,
+      "rmse_std": 0.12825866916946804,
+      "mae_std": 0.01977427500998763,
+      "p90_ae_std": 0.47947235182397296
+    }
+  },
+  "pooled_metrics": [
+    {
+      "split": "leave_config_out",
+      "method": "direct_extra",
+      "rmse": 7.152634021440348,
+      "mae": 5.710626729313692,
+      "median_ae": 4.793956897677489,
+      "p90_ae": 11.743360772805627,
+      "p95_ae": 14.305259974747452,
+      "bias_db": 0.06854065105078386,
+      "std_error_db": 7.152305615940881,
+      "count": 2288,
+      "unique_test_points": 2288
+    },
+    {
+      "split": "leave_config_out",
+      "method": "direct_rf",
+      "rmse": 7.104888700260582,
+      "mae": 5.68382508399704,
+      "median_ae": 4.88185416666667,
+      "p90_ae": 11.545759486785188,
+      "p95_ae": 13.959745472582977,
+      "bias_db": 0.03883544725162368,
+      "std_error_db": 7.104782561847144,
+      "count": 2288,
+      "unique_test_points": 2288
+    },
+    {
+      "split": "leave_config_out",
+      "method": "log_distance",
+      "rmse": 10.148812855111771,
+      "mae": 8.360766493468521,
+      "median_ae": 7.582219249055662,
+      "p90_ae": 16.41345126278437,
+      "p95_ae": 19.06242694418811,
+      "bias_db": 0.05473903942369627,
+      "std_error_db": 10.148665232711389,
+      "count": 2288,
+      "unique_test_points": 2288
+    },
+    {
+      "split": "leave_config_out",
+      "method": "multi_wall_linear",
+      "rmse": 7.382521667527986,
+      "mae": 5.910136900450956,
+      "median_ae": 5.052484342674234,
+      "p90_ae": 11.826372104518246,
+      "p95_ae": 14.321111321689385,
+      "bias_db": 0.06114592273603882,
+      "std_error_db": 7.382268441858027,
+      "count": 2288,
+      "unique_test_points": 2288
+    },
+    {
+      "split": "leave_config_out",
+      "method": "wallpath_residual_extra",
+      "rmse": 7.043010470232171,
+      "mae": 5.62301783774377,
+      "median_ae": 4.73757779552394,
+      "p90_ae": 11.539913243505188,
+      "p95_ae": 13.729291411365546,
+      "bias_db": 0.07098015828384538,
+      "std_error_db": 7.042652788610979,
+      "count": 2288,
+      "unique_test_points": 2288
+    },
+    {
+      "split": "leave_config_out",
+      "method": "wallpath_residual_rf",
+      "rmse": 6.970274694863696,
+      "mae": 5.571182728207318,
+      "median_ae": 4.805457778103857,
+      "p90_ae": 11.196074570842175,
+      "p95_ae": 13.776309031895073,
+      "bias_db": 0.073204307223918,
+      "std_error_db": 6.969890275410442,
+      "count": 2288,
+      "unique_test_points": 2288
+    }
+  ]
+}

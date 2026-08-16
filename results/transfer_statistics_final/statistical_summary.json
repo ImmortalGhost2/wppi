@@ -1,0 +1,882 @@
+{
+  "task2": {
+    "direct_rf_all_features": {
+      "rmse": {
+        "mean_per_map_wallpath_value": 4.818543626874059,
+        "mean_per_map_baseline_value": 4.926945471989319,
+        "mean_per_map_improvement_percent": 2.20018357685397,
+        "wallpath_map_win_rate": 0.49866666666666665,
+        "building_cluster_mean_difference": 0.10840184511525904,
+        "building_cluster_difference_ci": [
+          0.0005423665780214471,
+          0.22480585065740008
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "non_anchor_rmse": {
+        "mean_per_map_wallpath_value": 4.839370463174079,
+        "mean_per_map_baseline_value": 4.946017230861865,
+        "mean_per_map_improvement_percent": 2.1562150455590334,
+        "wallpath_map_win_rate": 0.49733333333333335,
+        "building_cluster_mean_difference": 0.10664676768778533,
+        "building_cluster_difference_ci": [
+          -0.001035737715153584,
+          0.22321669436681635
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "mae": {
+        "mean_per_map_wallpath_value": 3.2537590808338592,
+        "mean_per_map_baseline_value": 3.4273973936504785,
+        "mean_per_map_improvement_percent": 5.06618558846715,
+        "wallpath_map_win_rate": 0.688,
+        "building_cluster_mean_difference": 0.17363831281661984,
+        "building_cluster_difference_ci": [
+          0.08309485191769068,
+          0.2836239786677891
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "p90_ae": {
+        "mean_per_map_wallpath_value": 7.978105586369832,
+        "mean_per_map_baseline_value": 8.272061554378935,
+        "mean_per_map_improvement_percent": 3.553599862340154,
+        "wallpath_map_win_rate": 0.44266666666666665,
+        "building_cluster_mean_difference": 0.29395596800910095,
+        "building_cluster_difference_ci": [
+          0.07161731253729928,
+          0.5301428541607326
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "los_rmse": {
+        "mean_per_map_wallpath_value": 2.823779631604143,
+        "mean_per_map_baseline_value": 2.2681611250298426,
+        "mean_per_map_improvement_percent": -24.496430189323075,
+        "wallpath_map_win_rate": 0.2517580872011252,
+        "building_cluster_mean_difference": -0.5688162845367649,
+        "building_cluster_difference_ci": [
+          -1.0855995266718041,
+          -0.15545840734763938
+        ],
+        "wallpath_building_wins": 1,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 0,
+        "num_seeds": 3
+      },
+      "nlos_rmse": {
+        "mean_per_map_wallpath_value": 4.955199565154566,
+        "mean_per_map_baseline_value": 5.077014471555188,
+        "mean_per_map_improvement_percent": 2.3993413271344783,
+        "wallpath_map_win_rate": 0.5066666666666667,
+        "building_cluster_mean_difference": 0.12181490640062223,
+        "building_cluster_difference_ci": [
+          0.006414317952579543,
+          0.24766866993212272
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "high_wall_rmse": {
+        "mean_per_map_wallpath_value": 5.145581756579418,
+        "mean_per_map_baseline_value": 5.280149153436694,
+        "mean_per_map_improvement_percent": 2.5485529470259474,
+        "wallpath_map_win_rate": 0.5093333333333333,
+        "building_cluster_mean_difference": 0.13456739685727587,
+        "building_cluster_difference_ci": [
+          0.007740489511265838,
+          0.27352392792247443
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "free_space_rmse": {
+        "mean_per_map_wallpath_value": 4.666316566913656,
+        "mean_per_map_baseline_value": 4.801651648422863,
+        "mean_per_map_improvement_percent": 2.818511033670231,
+        "wallpath_map_win_rate": 0.5346666666666666,
+        "building_cluster_mean_difference": 0.1353350815092074,
+        "building_cluster_difference_ci": [
+          0.026820537190966748,
+          0.24786285129197752
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "wall_region_rmse": {
+        "mean_per_map_wallpath_value": 6.9216034958337005,
+        "mean_per_map_baseline_value": 6.751070637876396,
+        "mean_per_map_improvement_percent": -2.526012052081674,
+        "wallpath_map_win_rate": 0.3293333333333333,
+        "building_cluster_mean_difference": -0.17053285795730355,
+        "building_cluster_difference_ci": [
+          -0.26903239169259546,
+          -0.05635816444891527
+        ],
+        "wallpath_building_wins": 1,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 0,
+        "num_seeds": 3
+      }
+    },
+    "multi_wall_residual_idw": {
+      "rmse": {
+        "mean_per_map_wallpath_value": 4.818543626874059,
+        "mean_per_map_baseline_value": 5.627272420473938,
+        "mean_per_map_improvement_percent": 14.371594853973075,
+        "wallpath_map_win_rate": 0.964,
+        "building_cluster_mean_difference": 0.808728793599878,
+        "building_cluster_difference_ci": [
+          0.694907827493959,
+          0.9053008438786587
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "non_anchor_rmse": {
+        "mean_per_map_wallpath_value": 4.839370463174079,
+        "mean_per_map_baseline_value": 5.655655562510223,
+        "mean_per_map_improvement_percent": 14.433076595878145,
+        "wallpath_map_win_rate": 0.964,
+        "building_cluster_mean_difference": 0.8162850993361435,
+        "building_cluster_difference_ci": [
+          0.7028498265065893,
+          0.9126875162571249
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "mae": {
+        "mean_per_map_wallpath_value": 3.2537590808338592,
+        "mean_per_map_baseline_value": 3.9270056702825755,
+        "mean_per_map_improvement_percent": 17.144018776022584,
+        "wallpath_map_win_rate": 0.96,
+        "building_cluster_mean_difference": 0.673246589448717,
+        "building_cluster_difference_ci": [
+          0.4836635780334472,
+          0.8201145524978637
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "p90_ae": {
+        "mean_per_map_wallpath_value": 7.978105586369832,
+        "mean_per_map_baseline_value": 8.855910984357198,
+        "mean_per_map_improvement_percent": 9.912084702950311,
+        "wallpath_map_win_rate": 0.9506666666666667,
+        "building_cluster_mean_difference": 0.8778053979873658,
+        "building_cluster_difference_ci": [
+          0.6637480092578464,
+          1.0201086896260578
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "los_rmse": {
+        "mean_per_map_wallpath_value": 2.823779631604143,
+        "mean_per_map_baseline_value": 4.998046476995108,
+        "mean_per_map_improvement_percent": 43.50233346965919,
+        "wallpath_map_win_rate": 0.9985935302390999,
+        "building_cluster_mean_difference": 2.179953708495512,
+        "building_cluster_difference_ci": [
+          1.8770659343810763,
+          2.4207971539707502
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "nlos_rmse": {
+        "mean_per_map_wallpath_value": 4.955199565154566,
+        "mean_per_map_baseline_value": 5.7153205016230615,
+        "mean_per_map_improvement_percent": 13.299707973553415,
+        "wallpath_map_win_rate": 0.956,
+        "building_cluster_mean_difference": 0.7601209364684955,
+        "building_cluster_difference_ci": [
+          0.6413239010525221,
+          0.8742770180262907
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "high_wall_rmse": {
+        "mean_per_map_wallpath_value": 5.145581756579418,
+        "mean_per_map_baseline_value": 5.906351023279452,
+        "mean_per_map_improvement_percent": 12.880529174468597,
+        "wallpath_map_win_rate": 0.9533333333333334,
+        "building_cluster_mean_difference": 0.7607692667000339,
+        "building_cluster_difference_ci": [
+          0.609801073743746,
+          0.8894420726414112
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "free_space_rmse": {
+        "mean_per_map_wallpath_value": 4.666316566913656,
+        "mean_per_map_baseline_value": 5.446132745242297,
+        "mean_per_map_improvement_percent": 14.318714118929307,
+        "wallpath_map_win_rate": 0.9626666666666667,
+        "building_cluster_mean_difference": 0.7798161783286423,
+        "building_cluster_difference_ci": [
+          0.6356220180210922,
+          0.8903959153668785
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "wall_region_rmse": {
+        "mean_per_map_wallpath_value": 6.9216034958337005,
+        "mean_per_map_baseline_value": 7.928351918188017,
+        "mean_per_map_improvement_percent": 12.698079408468082,
+        "wallpath_map_win_rate": 0.9026666666666666,
+        "building_cluster_mean_difference": 1.0067484223543162,
+        "building_cluster_difference_ci": [
+          0.8010107181905541,
+          1.1979833873438661
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      }
+    },
+    "direct_extra_all_features": {
+      "rmse": {
+        "mean_per_map_wallpath_value": 4.818543626874059,
+        "mean_per_map_baseline_value": 5.519287731259263,
+        "mean_per_map_improvement_percent": 12.69627782614849,
+        "wallpath_map_win_rate": 0.6066666666666667,
+        "building_cluster_mean_difference": 0.7007441043852038,
+        "building_cluster_difference_ci": [
+          0.24715088882109632,
+          1.3188513024199302
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "non_anchor_rmse": {
+        "mean_per_map_wallpath_value": 4.839370463174079,
+        "mean_per_map_baseline_value": 5.535667449609323,
+        "mean_per_map_improvement_percent": 12.578374564107616,
+        "wallpath_map_win_rate": 0.6066666666666667,
+        "building_cluster_mean_difference": 0.6962969864352441,
+        "building_cluster_difference_ci": [
+          0.24466380762828072,
+          1.3207718818606777
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "mae": {
+        "mean_per_map_wallpath_value": 3.2537590808338592,
+        "mean_per_map_baseline_value": 4.024926814317704,
+        "mean_per_map_improvement_percent": 19.15979517293586,
+        "wallpath_map_win_rate": 0.7706666666666667,
+        "building_cluster_mean_difference": 0.7711677334838444,
+        "building_cluster_difference_ci": [
+          0.43867888212203987,
+          1.2781947222550711
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "p90_ae": {
+        "mean_per_map_wallpath_value": 7.978105586369832,
+        "mean_per_map_baseline_value": 9.249071926116944,
+        "mean_per_map_improvement_percent": 13.74155536793089,
+        "wallpath_map_win_rate": 0.5266666666666666,
+        "building_cluster_mean_difference": 1.2709663397471112,
+        "building_cluster_difference_ci": [
+          0.4251821790271335,
+          2.409723832872179
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "los_rmse": {
+        "mean_per_map_wallpath_value": 2.823779631604143,
+        "mean_per_map_baseline_value": 2.377740078677529,
+        "mean_per_map_improvement_percent": -18.75897020563726,
+        "wallpath_map_win_rate": 0.360056258790436,
+        "building_cluster_mean_difference": -0.4693546252442098,
+        "building_cluster_difference_ci": [
+          -1.2887851830861967,
+          0.24034998864493157
+        ],
+        "wallpath_building_wins": 2,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 1.0,
+        "wallpath_seed_wins": 0,
+        "num_seeds": 3
+      },
+      "nlos_rmse": {
+        "mean_per_map_wallpath_value": 4.955199565154566,
+        "mean_per_map_baseline_value": 5.669094462259188,
+        "mean_per_map_improvement_percent": 12.592750074235449,
+        "wallpath_map_win_rate": 0.5813333333333334,
+        "building_cluster_mean_difference": 0.7138948971046208,
+        "building_cluster_difference_ci": [
+          0.24898238447938142,
+          1.3929671684218974
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "high_wall_rmse": {
+        "mean_per_map_wallpath_value": 5.145581756579418,
+        "mean_per_map_baseline_value": 5.910053264278187,
+        "mean_per_map_improvement_percent": 12.935103517922977,
+        "wallpath_map_win_rate": 0.58,
+        "building_cluster_mean_difference": 0.7644715076987685,
+        "building_cluster_difference_ci": [
+          0.2502437229263187,
+          1.5090387212942225
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "free_space_rmse": {
+        "mean_per_map_wallpath_value": 4.666316566913656,
+        "mean_per_map_baseline_value": 5.423635175834825,
+        "mean_per_map_improvement_percent": 13.963302920805326,
+        "wallpath_map_win_rate": 0.6386666666666667,
+        "building_cluster_mean_difference": 0.7573186089211704,
+        "building_cluster_difference_ci": [
+          0.3163059791416962,
+          1.4138695885438541
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "wall_region_rmse": {
+        "mean_per_map_wallpath_value": 6.9216034958337005,
+        "mean_per_map_baseline_value": 6.9979580155699574,
+        "mean_per_map_improvement_percent": 1.091097139570909,
+        "wallpath_map_win_rate": 0.31333333333333335,
+        "building_cluster_mean_difference": 0.07635451973625726,
+        "building_cluster_difference_ci": [
+          -0.3190030700346029,
+          0.5047140309860152
+        ],
+        "wallpath_building_wins": 3,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 1.0,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      }
+    }
+  },
+  "task3": {
+    "direct_rf_all_features": {
+      "rmse": {
+        "mean_per_map_wallpath_value": 5.319527300434667,
+        "mean_per_map_baseline_value": 5.871376060378109,
+        "mean_per_map_improvement_percent": 9.398968048861509,
+        "wallpath_map_win_rate": 0.8727927927927928,
+        "building_cluster_mean_difference": 0.5518487599434418,
+        "building_cluster_difference_ci": [
+          0.3555008646425082,
+          0.7576620798162015
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "non_anchor_rmse": {
+        "mean_per_map_wallpath_value": 5.340235698565371,
+        "mean_per_map_baseline_value": 5.889766651233081,
+        "mean_per_map_improvement_percent": 9.33026697335556,
+        "wallpath_map_win_rate": 0.872072072072072,
+        "building_cluster_mean_difference": 0.5495309526677095,
+        "building_cluster_difference_ci": [
+          0.35372902296645725,
+          0.7602534031010018
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "mae": {
+        "mean_per_map_wallpath_value": 3.735392966395742,
+        "mean_per_map_baseline_value": 4.314250799041611,
+        "mean_per_map_improvement_percent": 13.417343117244348,
+        "wallpath_map_win_rate": 0.9423423423423424,
+        "building_cluster_mean_difference": 0.5788578326458687,
+        "building_cluster_difference_ci": [
+          0.4084768791671272,
+          0.7603189326728786
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "p90_ae": {
+        "mean_per_map_wallpath_value": 8.804805737343637,
+        "mean_per_map_baseline_value": 9.803031943553203,
+        "mean_per_map_improvement_percent": 10.182831311347835,
+        "wallpath_map_win_rate": 0.8634234234234234,
+        "building_cluster_mean_difference": 0.9982262062095666,
+        "building_cluster_difference_ci": [
+          0.6675338353623858,
+          1.3766094633337258
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "los_rmse": {
+        "mean_per_map_wallpath_value": 4.267835690126795,
+        "mean_per_map_baseline_value": 5.005330981837093,
+        "mean_per_map_improvement_percent": 14.734196287647249,
+        "wallpath_map_win_rate": 0.7845073096639453,
+        "building_cluster_mean_difference": 0.7353059830691249,
+        "building_cluster_difference_ci": [
+          0.45743429717630973,
+          0.9589219514565667
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "nlos_rmse": {
+        "mean_per_map_wallpath_value": 5.416795872557125,
+        "mean_per_map_baseline_value": 5.941221524981044,
+        "mean_per_map_improvement_percent": 8.826899488916,
+        "wallpath_map_win_rate": 0.8493693693693694,
+        "building_cluster_mean_difference": 0.5244256524239187,
+        "building_cluster_difference_ci": [
+          0.3163240973964613,
+          0.7440735413866587
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "high_wall_rmse": {
+        "mean_per_map_wallpath_value": 5.599664332561322,
+        "mean_per_map_baseline_value": 6.113184518233628,
+        "mean_per_map_improvement_percent": 8.400207520984246,
+        "wallpath_map_win_rate": 0.8127927927927928,
+        "building_cluster_mean_difference": 0.5135201856723046,
+        "building_cluster_difference_ci": [
+          0.2806274318325353,
+          0.7588658291655876
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "free_space_rmse": {
+        "mean_per_map_wallpath_value": 5.190796191773113,
+        "mean_per_map_baseline_value": 5.78436168641128,
+        "mean_per_map_improvement_percent": 10.261555670569177,
+        "wallpath_map_win_rate": 0.8942342342342342,
+        "building_cluster_mean_difference": 0.5935654946381685,
+        "building_cluster_difference_ci": [
+          0.3918723284829681,
+          0.7971882939118349
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "wall_region_rmse": {
+        "mean_per_map_wallpath_value": 7.1871465903206815,
+        "mean_per_map_baseline_value": 7.235339770543157,
+        "mean_per_map_improvement_percent": 0.6660804019001539,
+        "wallpath_map_win_rate": 0.4502702702702703,
+        "building_cluster_mean_difference": 0.048193180222474444,
+        "building_cluster_difference_ci": [
+          -0.10820327101220158,
+          0.20234477588972713
+        ],
+        "wallpath_building_wins": 3,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 1.0,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      }
+    },
+    "multi_wall_residual_idw": {
+      "rmse": {
+        "mean_per_map_wallpath_value": 5.319527300434667,
+        "mean_per_map_baseline_value": 5.856084536283267,
+        "mean_per_map_improvement_percent": 9.162388837186102,
+        "wallpath_map_win_rate": 0.8700900900900901,
+        "building_cluster_mean_difference": 0.5365572358485994,
+        "building_cluster_difference_ci": [
+          0.34002972847415514,
+          0.720707313835141
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "non_anchor_rmse": {
+        "mean_per_map_wallpath_value": 5.340235698565371,
+        "mean_per_map_baseline_value": 5.88562131754933,
+        "mean_per_map_improvement_percent": 9.266406884822294,
+        "wallpath_map_win_rate": 0.870990990990991,
+        "building_cluster_mean_difference": 0.5453856189839605,
+        "building_cluster_difference_ci": [
+          0.3492812639280055,
+          0.7285450088525736
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "mae": {
+        "mean_per_map_wallpath_value": 3.735392966395742,
+        "mean_per_map_baseline_value": 4.157722823011267,
+        "mean_per_map_improvement_percent": 10.157720333787154,
+        "wallpath_map_win_rate": 0.8643243243243244,
+        "building_cluster_mean_difference": 0.4223298566155247,
+        "building_cluster_difference_ci": [
+          0.13698245821056423,
+          0.6562848931604677
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "p90_ae": {
+        "mean_per_map_wallpath_value": 8.804805737343637,
+        "mean_per_map_baseline_value": 9.286340105698272,
+        "mean_per_map_improvement_percent": 5.185405260562846,
+        "wallpath_map_win_rate": 0.8403603603603603,
+        "building_cluster_mean_difference": 0.48153436835463703,
+        "building_cluster_difference_ci": [
+          0.13387389317647114,
+          0.7942537366448936
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "los_rmse": {
+        "mean_per_map_wallpath_value": 4.267835690126795,
+        "mean_per_map_baseline_value": 5.9256201149360646,
+        "mean_per_map_improvement_percent": 27.976555915737386,
+        "wallpath_map_win_rate": 0.989177900132903,
+        "building_cluster_mean_difference": 1.6562643286950252,
+        "building_cluster_difference_ci": [
+          1.4504067316787543,
+          1.824154631892305
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "nlos_rmse": {
+        "mean_per_map_wallpath_value": 5.416795872557125,
+        "mean_per_map_baseline_value": 5.899949874702291,
+        "mean_per_map_improvement_percent": 8.18912045705382,
+        "wallpath_map_win_rate": 0.8596396396396396,
+        "building_cluster_mean_difference": 0.4831540021451678,
+        "building_cluster_difference_ci": [
+          0.2557908857372029,
+          0.6895747586751765
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "high_wall_rmse": {
+        "mean_per_map_wallpath_value": 5.599664332561322,
+        "mean_per_map_baseline_value": 6.0385302223059245,
+        "mean_per_map_improvement_percent": 7.267760093730444,
+        "wallpath_map_win_rate": 0.8466666666666667,
+        "building_cluster_mean_difference": 0.43886588974460256,
+        "building_cluster_difference_ci": [
+          0.18853837240870638,
+          0.6781203602665402
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "free_space_rmse": {
+        "mean_per_map_wallpath_value": 5.190796191773113,
+        "mean_per_map_baseline_value": 5.690876936867674,
+        "mean_per_map_improvement_percent": 8.787410985024954,
+        "wallpath_map_win_rate": 0.8677477477477478,
+        "building_cluster_mean_difference": 0.5000807450945618,
+        "building_cluster_difference_ci": [
+          0.2531535636975656,
+          0.6980039591513509
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "wall_region_rmse": {
+        "mean_per_map_wallpath_value": 7.1871465903206815,
+        "mean_per_map_baseline_value": 8.010856836249392,
+        "mean_per_map_improvement_percent": 10.28242375024597,
+        "wallpath_map_win_rate": 0.8387387387387387,
+        "building_cluster_mean_difference": 0.8237102459287111,
+        "building_cluster_difference_ci": [
+          0.5743453151609036,
+          1.0198723482255474
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      }
+    },
+    "direct_extra_all_features": {
+      "rmse": {
+        "mean_per_map_wallpath_value": 5.319527300434667,
+        "mean_per_map_baseline_value": 7.766873655307647,
+        "mean_per_map_improvement_percent": 31.510057501714822,
+        "wallpath_map_win_rate": 0.9300900900900901,
+        "building_cluster_mean_difference": 2.447346354872978,
+        "building_cluster_difference_ci": [
+          1.7703383742992589,
+          3.486699729864207
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "non_anchor_rmse": {
+        "mean_per_map_wallpath_value": 5.340235698565371,
+        "mean_per_map_baseline_value": 7.780186616367294,
+        "mean_per_map_improvement_percent": 31.361084741450316,
+        "wallpath_map_win_rate": 0.9295495495495496,
+        "building_cluster_mean_difference": 2.439950917801922,
+        "building_cluster_difference_ci": [
+          1.739148640123299,
+          3.4768933507099633
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "mae": {
+        "mean_per_map_wallpath_value": 3.735392966395742,
+        "mean_per_map_baseline_value": 6.197032780557781,
+        "mean_per_map_improvement_percent": 39.72287869583405,
+        "wallpath_map_win_rate": 0.9672072072072072,
+        "building_cluster_mean_difference": 2.46163981416204,
+        "building_cluster_difference_ci": [
+          1.8735172679474403,
+          3.4429635838560158
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "p90_ae": {
+        "mean_per_map_wallpath_value": 8.804805737343637,
+        "mean_per_map_baseline_value": 12.562371578689094,
+        "mean_per_map_improvement_percent": 29.911277642191553,
+        "wallpath_map_win_rate": 0.9210810810810811,
+        "building_cluster_mean_difference": 3.757565841345458,
+        "building_cluster_difference_ci": [
+          2.6554899297891796,
+          5.22088753177597
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "los_rmse": {
+        "mean_per_map_wallpath_value": 4.267835690126795,
+        "mean_per_map_baseline_value": 8.618509058463102,
+        "mean_per_map_improvement_percent": 50.48058009597477,
+        "wallpath_map_win_rate": 0.87051452439719,
+        "building_cluster_mean_difference": 4.339635089661586,
+        "building_cluster_difference_ci": [
+          3.66023418033393,
+          4.902363239307737
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "nlos_rmse": {
+        "mean_per_map_wallpath_value": 5.416795872557125,
+        "mean_per_map_baseline_value": 7.577861770673458,
+        "mean_per_map_improvement_percent": 28.51814883295602,
+        "wallpath_map_win_rate": 0.8981981981981982,
+        "building_cluster_mean_difference": 2.1610658981163335,
+        "building_cluster_difference_ci": [
+          1.3559278875811744,
+          3.357740656203178
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "high_wall_rmse": {
+        "mean_per_map_wallpath_value": 5.599664332561322,
+        "mean_per_map_baseline_value": 7.752697600940604,
+        "mean_per_map_improvement_percent": 27.771407827361447,
+        "wallpath_map_win_rate": 0.8637837837837837,
+        "building_cluster_mean_difference": 2.153033268379281,
+        "building_cluster_difference_ci": [
+          1.2667405577782944,
+          3.4508312748485515
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "free_space_rmse": {
+        "mean_per_map_wallpath_value": 5.190796191773113,
+        "mean_per_map_baseline_value": 7.740384726771376,
+        "mean_per_map_improvement_percent": 32.93878308374128,
+        "wallpath_map_win_rate": 0.94,
+        "building_cluster_mean_difference": 2.5495885349982634,
+        "building_cluster_difference_ci": [
+          1.867283160629481,
+          3.619359445300912
+        ],
+        "wallpath_building_wins": 5,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.0625,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      },
+      "wall_region_rmse": {
+        "mean_per_map_wallpath_value": 7.1871465903206815,
+        "mean_per_map_baseline_value": 8.209738914268726,
+        "mean_per_map_improvement_percent": 12.455844633143625,
+        "wallpath_map_win_rate": 0.5061261261261262,
+        "building_cluster_mean_difference": 1.0225923239480461,
+        "building_cluster_difference_ci": [
+          0.20562360813349403,
+          1.9860309610455413
+        ],
+        "wallpath_building_wins": 4,
+        "num_buildings": 5,
+        "sign_test_p_two_sided": 0.375,
+        "wallpath_seed_wins": 3,
+        "num_seeds": 3
+      }
+    }
+  }
+}

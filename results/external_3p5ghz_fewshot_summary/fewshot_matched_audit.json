@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checks": {
+    "fewshot_split": true,
+    "zero_shot_split": true,
+    "fewshot_model_seed_11": true,
+    "zero_shot_seed_11": true,
+    "fewshot_methods_complete": true,
+    "folds_complete": true,
+    "fractions_complete": true,
+    "anchor_seeds_complete": true,
+    "model_seed_constant": true,
+    "anchors_excluded": true,
+    "fewshot_predictions_unique": true,
+    "zero_shot_predictions_unique": true
+  },
+  "fewshot_dir": "results\\external_3p5ghz_fewshot_modelseed11",
+  "zero_shot_dir": "results\\external_3p5ghz_leave_scenario_out_seed11",
+  "matched_method_pairs": {
+    "bias_calibrated_log_distance": "log_distance",
+    "bias_calibrated_multi_wall": "multi_wall_linear",
+    "direct_extra_with_anchors": "direct_extra",
+    "direct_rf_with_anchors": "direct_rf",
+    "wallpath_fewshot_residual_extra": "wallpath_residual_extra",
+    "wallpath_fewshot_residual_rf": "wallpath_residual_rf"
+  }
+}

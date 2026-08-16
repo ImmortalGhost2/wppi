@@ -1,0 +1,4 @@
+scenario,config,source_file,_source_row,coord,distance_m,pl_db,reason
+Comms,C1,PL_Comms_C1.csv,718,,,,invalid_target_or_distance
+Comms,C2,PL_Comms_C2.csv,671,,,,invalid_target_or_distance
+Library,C1,PL_Library_C1.csv,343,,,,invalid_target_or_distance

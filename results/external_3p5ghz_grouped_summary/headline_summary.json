@@ -1,0 +1,105 @@
+{
+  "audit_status": "PASS",
+  "num_runs": 6,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "protocols": [
+    "leave_config_out",
+    "leave_scenario_out"
+  ],
+  "rows_after_cleaning": 2288,
+  "interpretation_note": "Seed standard deviations reflect estimator randomness on the same observations. The two configuration groups and three scenario groups are too few for strong inferential claims.",
+  "best_methods": {
+    "leave_config_out": {
+      "pooled_rmse_method": "wallpath_residual_rf",
+      "pooled_rmse_mean": 6.973544603771418,
+      "pooled_rmse_std": 0.005054134686040935
+    },
+    "leave_scenario_out": {
+      "pooled_rmse_method": "multi_wall_linear",
+      "pooled_rmse_mean": 10.082889508176178,
+      "pooled_rmse_std": 0.0
+    }
+  },
+  "wallpath_vs_direct_rf": {
+    "leave_config_out": [
+      {
+        "protocol": "leave_config_out",
+        "method": "wallpath_residual_extra",
+        "baseline": "direct_rf",
+        "num_seeds": 3,
+        "pooled_method_rmse_mean": 7.039500267830117,
+        "pooled_method_rmse_std": 0.005524797207138256,
+        "pooled_baseline_rmse_mean": 7.0974775447921905,
+        "pooled_baseline_rmse_std": 0.006418248910300686,
+        "pooled_rmse_improvement_mean_percent": 0.8168433455235297,
+        "pooled_rmse_improvement_std_percent": 0.08014029613310232,
+        "macro_rmse_improvement_mean_percent": 0.816432165842782,
+        "macro_rmse_improvement_std_percent": 0.07976155287651843,
+        "seed_wins_pooled_rmse": 3,
+        "fold_wins_after_seed_average": 1,
+        "num_folds": 2,
+        "mean_point_win_percent": 51.617132867132874
+      },
+      {
+        "protocol": "leave_config_out",
+        "method": "wallpath_residual_rf",
+        "baseline": "direct_rf",
+        "num_seeds": 3,
+        "pooled_method_rmse_mean": 6.973544603771418,
+        "pooled_method_rmse_std": 0.005054134686040935,
+        "pooled_baseline_rmse_mean": 7.0974775447921905,
+        "pooled_baseline_rmse_std": 0.006418248910300686,
+        "pooled_rmse_improvement_mean_percent": 1.7460771666239214,
+        "pooled_rmse_improvement_std_percent": 0.14157056132468593,
+        "macro_rmse_improvement_mean_percent": 1.7449025146871229,
+        "macro_rmse_improvement_std_percent": 0.142321133018691,
+        "seed_wins_pooled_rmse": 3,
+        "fold_wins_after_seed_average": 2,
+        "num_folds": 2,
+        "mean_point_win_percent": 54.006410256410255
+      }
+    ],
+    "leave_scenario_out": [
+      {
+        "protocol": "leave_scenario_out",
+        "method": "wallpath_residual_extra",
+        "baseline": "direct_rf",
+        "num_seeds": 3,
+        "pooled_method_rmse_mean": 10.9568745090779,
+        "pooled_method_rmse_std": 0.010387178822042568,
+        "pooled_baseline_rmse_mean": 10.892102090072568,
+        "pooled_baseline_rmse_std": 0.05918976428241196,
+        "pooled_rmse_improvement_mean_percent": -0.5963182918410642,
+        "pooled_rmse_improvement_std_percent": 0.45477966432117245,
+        "macro_rmse_improvement_mean_percent": 1.1675950388450511,
+        "macro_rmse_improvement_std_percent": 0.40431935294679683,
+        "seed_wins_pooled_rmse": 0,
+        "fold_wins_after_seed_average": 2,
+        "num_folds": 3,
+        "mean_point_win_percent": 50.641025641025635
+      },
+      {
+        "protocol": "leave_scenario_out",
+        "method": "wallpath_residual_rf",
+        "baseline": "direct_rf",
+        "num_seeds": 3,
+        "pooled_method_rmse_mean": 11.100157555248705,
+        "pooled_method_rmse_std": 0.04962076627546867,
+        "pooled_baseline_rmse_mean": 10.892102090072568,
+        "pooled_baseline_rmse_std": 0.05918976428241196,
+        "pooled_rmse_improvement_mean_percent": -1.9110429265971192,
+        "pooled_rmse_improvement_std_percent": 0.41719441012782643,
+        "macro_rmse_improvement_mean_percent": 0.6431518708929712,
+        "macro_rmse_improvement_std_percent": 0.27314040453289423,
+        "seed_wins_pooled_rmse": 0,
+        "fold_wins_after_seed_average": 2,
+        "num_folds": 3,
+        "mean_point_win_percent": 51.180069930069926
+      }
+    ]
+  }
+}

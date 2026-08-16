@@ -1,0 +1,98 @@
+{
+  "config_path": "C:\\Users\\Pankaj\\WallPath-PI\\configs\\config_icassp2025_task1_final_sparse_seed11.yaml",
+  "data_root": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full",
+  "train_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\train_split.csv",
+  "val_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\val_split.csv",
+  "eval_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\val_split.csv",
+  "group_column": "scene_id",
+  "sparse_rates": [
+    0.005,
+    0.01,
+    0.05,
+    0.1
+  ],
+  "sparse_seeds": [
+    11
+  ],
+  "max_samples_checked": 50,
+  "mode": "quick",
+  "max_samples": 50,
+  "max_feature_pixels": 2000,
+  "n_checked_samples": 50,
+  "n_checked_pixels": 100000,
+  "n_train": 1000,
+  "n_val": 250,
+  "n_eval": 250,
+  "overall": "PASS",
+  "checks": [
+    {
+      "id": 1,
+      "name": "Train/val group disjointness",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "No 'scene_id' overlap between train (20) and val (5).",
+      "metrics": {
+        "train_groups": 20,
+        "val_groups": 5
+      }
+    },
+    {
+      "id": 2,
+      "name": "Sparse anchors subset of valid_mask",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "All 50 checked sample(s) keep anchors within valid_mask.",
+      "metrics": {}
+    },
+    {
+      "id": 3,
+      "name": "Sparse-anchor features independent of dense labels",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "Dense-label perturbation left the feature table unchanged on 50 sample(s).",
+      "metrics": {}
+    },
+    {
+      "id": 4,
+      "name": "Dense labels feed only metric computation",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "Dense-label perturbation left all baselines unchanged on 50 sample(s).",
+      "metrics": {}
+    },
+    {
+      "id": 5,
+      "name": "No NaN/Inf on valid training/eval pixels",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "All checked valid targets and feature rows are finite.",
+      "metrics": {}
+    },
+    {
+      "id": 6,
+      "name": "Anchor counts >= min_anchors",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "Every sample reaches min_anchors=16 across 4 rate(s) x 1 seed(s).",
+      "metrics": {
+        "min_anchors": 16
+      }
+    },
+    {
+      "id": 7,
+      "name": "Eval sample_ids absent from training",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "None of 250 eval sample_id(s) appear among 1000 train sample_id(s).",
+      "metrics": {}
+    },
+    {
+      "id": 8,
+      "name": "IDW empty-anchor fill ignores dense target mean",
+      "status": "PASS",
+      "severity": "error",
+      "detail": "Empty-anchor IDW fills a caller constant, is invariant to dense values, and supports on_empty='raise'.",
+      "metrics": {}
+    }
+  ]
+}

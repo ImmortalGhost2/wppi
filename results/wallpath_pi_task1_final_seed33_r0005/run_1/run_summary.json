@@ -1,0 +1,511 @@
+{
+  "status": "completed",
+  "experiment_name": "wallpath_pi_task1_final_seed33_r0005",
+  "env": {
+    "timestamp_local": "2026-07-08 13:10:04",
+    "python": "3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "config": {
+    "data_root": "./data/icassp2025_indoor_converted_task1_full",
+    "results_root": "./results",
+    "train_csv": "train_split.csv",
+    "val_csv": "val_split.csv",
+    "eval_csv": "val_split.csv",
+    "cache_root": "./data/processed/cache/base_maps",
+    "synthetic": {},
+    "dataset": {
+      "material_ids": [
+        1,
+        2,
+        3
+      ],
+      "min_distance_m": 0.25,
+      "clip_min_db": 13.0,
+      "clip_max_db": 160.0,
+      "treat_clip_max_as_clipped": true,
+      "cache_features": true,
+      "feature_set": {
+        "coordinate_features": true,
+        "raster_wall_features": true,
+        "material_features": true,
+        "sparse_anchor_features": true,
+        "baseline_prediction_features": true,
+        "k_nearest_anchors": 4,
+        "idw_power": 2.0,
+        "idw_eps": 1e-06
+      }
+    },
+    "material_ids": [
+      1,
+      2,
+      3
+    ],
+    "min_distance_m": 0.25,
+    "clip_min_db": 13.0,
+    "clip_max_db": 160.0,
+    "treat_clip_max_as_clipped": true,
+    "feature_set": {
+      "coordinate_features": true,
+      "raster_wall_features": true,
+      "material_features": true,
+      "sparse_anchor_features": true,
+      "baseline_prediction_features": true,
+      "k_nearest_anchors": 4,
+      "idw_power": 2.0,
+      "idw_eps": 1e-06
+    },
+    "cache_features": true,
+    "group_column": "scene_id",
+    "experiment_name": "wallpath_pi_task1_final_seed33_r0005",
+    "seed": 42,
+    "methods": [
+      "log_distance",
+      "multi_wall",
+      "idw",
+      "multi_wall_residual_idw",
+      "direct_rf_geometry",
+      "direct_rf_sparse_anchor",
+      "direct_rf_all_features",
+      "direct_extra_all_features",
+      "wallpath_rf",
+      "wallpath_extra",
+      "wallpath_calibrated"
+    ],
+    "primary_method": "wallpath_extra",
+    "sparse_rates": [
+      0.005
+    ],
+    "sparse_seeds": [
+      33
+    ],
+    "min_anchors": 16,
+    "max_train_points_per_sample": 1000,
+    "baseline_ridge_alpha": 1e-06,
+    "model_params": {
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 18,
+        "min_samples_leaf": 1,
+        "n_jobs": 4
+      },
+      "extra_trees": {
+        "n_estimators": 150,
+        "max_depth": 20,
+        "min_samples_leaf": 1,
+        "n_jobs": 4
+      }
+    },
+    "prepare_n_jobs": 4,
+    "baseline": {
+      "d0_m": 1.0,
+      "idw_power": 2.0,
+      "idw_eps": 1e-06,
+      "idw_query_chunk_size": "auto"
+    },
+    "evaluation": {
+      "metrics": [
+        "rmse",
+        "mae",
+        "median_ae",
+        "p90_ae",
+        "los_rmse",
+        "nlos_rmse",
+        "high_wall_rmse",
+        "unclipped_rmse",
+        "non_anchor_rmse",
+        "non_anchor_mae",
+        "non_anchor_p90_ae",
+        "non_anchor_los_rmse",
+        "non_anchor_nlos_rmse",
+        "free_space_rmse",
+        "wall_region_rmse"
+      ],
+      "high_wall_count_threshold": 2,
+      "export_npz": false,
+      "primary_sparse_rate": 0.005,
+      "primary_sparse_seed": 33,
+      "bootstrap_iterations": 100,
+      "bootstrap_confidence": 0.95
+    },
+    "system": {
+      "deterministic": true,
+      "num_threads": 1
+    },
+    "deterministic": true,
+    "num_threads": 1,
+    "_config_path": "C:\\Users\\Pankaj\\WallPath-PI\\configs\\config_icassp2025_task1_final_seed33_r0005.yaml",
+    "repo_root": "C:\\Users\\Pankaj\\WallPath-PI",
+    "_resolved_data_root": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full",
+    "_resolved_train_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\train_split.csv",
+    "_resolved_val_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\val_split.csv",
+    "_resolved_eval_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\val_split.csv",
+    "_resolved_cache_root": "C:\\Users\\Pankaj\\WallPath-PI\\data\\processed\\cache\\base_maps"
+  },
+  "metrics": {
+    "primary_method": "wallpath_extra",
+    "primary_sparse_rate": 0.005,
+    "primary_sparse_seed": 33,
+    "primary_anchor_count": 346.2,
+    "primary_anchor_count_std": 311.54776203999364,
+    "primary_valid_count": 69171.2,
+    "primary_valid_count_std": 62288.73393528756,
+    "primary_mw_anchor_count": 346.2,
+    "primary_mw_anchor_count_std": 311.54776203999364,
+    "primary_mw_design_rank": 3.4,
+    "primary_mw_design_rank_std": 0.490880693673816,
+    "primary_rmse": 3.343900653143496,
+    "primary_rmse_std": 0.9955340513404956,
+    "primary_mae": 2.229428218841553,
+    "primary_mae_std": 0.6891645288773875,
+    "primary_median_ae": 1.3738102798461913,
+    "primary_median_ae_std": 0.5231138091517028,
+    "primary_p90_ae": 5.430540254592896,
+    "primary_p90_ae_std": 1.5254704588566053,
+    "primary_p95_ae": 7.177554777145386,
+    "primary_p95_ae_std": 1.9984726950984268,
+    "primary_bias_db": 0.0272453334955498,
+    "primary_bias_db_std": 0.3567134468222726,
+    "primary_std_error_db": 3.32816555261612,
+    "primary_std_error_db_std": 0.984351844935406,
+    "primary_count": 69171.2,
+    "primary_count_std": 62288.73393528756,
+    "primary_los_rmse": 1.3901133671928525,
+    "primary_los_rmse_std": 0.792331319915425,
+    "primary_nlos_rmse": 3.464203462972081,
+    "primary_nlos_rmse_std": 1.0512751956285529,
+    "primary_high_wall_rmse": 3.6095837949350926,
+    "primary_high_wall_rmse_std": 1.076459481074948,
+    "primary_unclipped_rmse": 3.343900653143496,
+    "primary_unclipped_rmse_std": 0.9955340513404956,
+    "primary_unclipped_count": 69171.2,
+    "primary_unclipped_count_std": 62288.73393528756,
+    "primary_clipped_pixel_fraction": 3.7878787878787874e-06,
+    "primary_clipped_pixel_fraction_std": 7.5909546975019154e-06,
+    "primary_non_anchor_rmse": 3.3518378302361733,
+    "primary_non_anchor_rmse_std": 0.997847091925078,
+    "primary_non_anchor_mae": 2.238535536289215,
+    "primary_non_anchor_mae_std": 0.6920076269387905,
+    "primary_non_anchor_p90_ae": 5.442836220741272,
+    "primary_non_anchor_p90_ae_std": 1.5282212450433428,
+    "primary_non_anchor_count": 68825.0,
+    "primary_non_anchor_count_std": 61977.186267776655,
+    "primary_non_anchor_los_rmse": 1.3930884641840586,
+    "primary_non_anchor_los_rmse_std": 0.7932741588425941,
+    "primary_non_anchor_nlos_rmse": 3.4724289765905776,
+    "primary_non_anchor_nlos_rmse_std": 1.053712629191157,
+    "primary_free_space_rmse": 3.236166243510488,
+    "primary_free_space_rmse_std": 0.9544006867052608,
+    "primary_free_space_mae": 2.1513778495788576,
+    "primary_free_space_mae_std": 0.663993531256973,
+    "primary_free_space_p90_ae": 5.269561621665955,
+    "primary_free_space_p90_ae_std": 1.4971805711683797,
+    "primary_free_space_count": 66369.0,
+    "primary_free_space_count_std": 61020.82222471212,
+    "primary_wall_region_rmse": 4.771580515213153,
+    "primary_wall_region_rmse_std": 1.322652954777676,
+    "primary_rmse_delta_vs_multi_wall": -2.726555020984256,
+    "primary_rmse_delta_vs_multi_wall_std": 1.0823026056465748,
+    "primary_rmse_delta_vs_direct_rf": 0.1110446634154247,
+    "primary_rmse_delta_vs_direct_rf_std": 0.4013310659173771,
+    "primary_num_rows": 250
+  },
+  "artifacts": {
+    "run_dir": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1",
+    "final_evaluation_results_csv": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\final_evaluation_results.csv",
+    "per_sample_metrics_csv": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\per_sample_metrics.csv",
+    "training_log_csv": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\training_log.csv",
+    "feature_importances_csv": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\feature_importances.csv",
+    "eval_outputs_primary_npz": null,
+    "model_paths": [
+      "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\models\\direct_rf_geometry_rate_0p005_seed_33.joblib",
+      "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\models\\direct_rf_sparse_anchor_rate_0p005_seed_33.joblib",
+      "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\models\\direct_rf_all_features_rate_0p005_seed_33.joblib",
+      "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\models\\direct_extra_all_features_rate_0p005_seed_33.joblib",
+      "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\models\\wallpath_rf_rate_0p005_seed_33.joblib",
+      "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\models\\wallpath_extra_rate_0p005_seed_33.joblib",
+      "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\models\\wallpath_calibrated_rate_0p005_seed_33.joblib"
+    ],
+    "sparse_curves_png": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\plots\\sparse_curves.png",
+    "model_comparison_png": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\plots\\model_comparison_rate_0p005.png",
+    "feature_importance_png": "C:\\Users\\Pankaj\\WallPath-PI\\results\\wallpath_pi_task1_final_seed33_r0005\\run_1\\plots\\feature_importance.png"
+  },
+  "dataset_info": {
+    "train_samples": 1000,
+    "val_samples": 250,
+    "eval_samples": 250,
+    "train_scenes": 20,
+    "val_scenes": 5,
+    "material_ids": [
+      1,
+      2,
+      3
+    ],
+    "sparse_rates": [
+      0.005
+    ],
+    "sparse_seeds": [
+      33
+    ],
+    "methods": [
+      "log_distance",
+      "multi_wall",
+      "idw",
+      "multi_wall_residual_idw",
+      "direct_rf_geometry",
+      "direct_rf_sparse_anchor",
+      "direct_rf_all_features",
+      "direct_extra_all_features",
+      "wallpath_rf",
+      "wallpath_extra",
+      "wallpath_calibrated"
+    ]
+  },
+  "timing": {
+    "start_time": "2026-07-08 11:52:18",
+    "end_time": "2026-07-08 13:10:04",
+    "duration_seconds": 4665.255
+  },
+  "extra": {
+    "primary_method": "wallpath_extra"
+  },
+  "config_fingerprint": {
+    "resolved_config_md5": "20f68f5350ae7492e4559c2b3951899a",
+    "resolved_config_sha256": "3e4206f39a384730076ba38a36f9ac315d96e5498d4e803aee367973b1af7e6f",
+    "config_path": "C:\\Users\\Pankaj\\WallPath-PI\\configs\\config_icassp2025_task1_final_seed33_r0005.yaml",
+    "config_md5": "80e7048ee470260c6a39f87d22d4f155",
+    "config_sha256": "7a3be3f1311fb41e026554039d39837e9364bcfdea03432fc48e02ae4096828a"
+  },
+  "data_fingerprint": {
+    "data_root": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full",
+    "train_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\train_split.csv",
+    "train_csv_md5": "f8840a047cc4cbaa1c73ce40e310de76",
+    "train_csv_sha256": "824bf95670c569c54d442148fee6ea5f48c29f1650e9417618022bc37ffcb978",
+    "val_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\val_split.csv",
+    "val_csv_md5": "aea907420fec5944e30ef74b9c97d9c0",
+    "val_csv_sha256": "4e66137233b7346bf751b0d0e6f5801b1fdc70e79c4284c0f9b998b981f56303",
+    "eval_csv": "C:\\Users\\Pankaj\\WallPath-PI\\data\\icassp2025_indoor_converted_task1_full\\val_split.csv",
+    "eval_csv_md5": "aea907420fec5944e30ef74b9c97d9c0",
+    "eval_csv_sha256": "4e66137233b7346bf751b0d0e6f5801b1fdc70e79c4284c0f9b998b981f56303"
+  },
+  "code_fingerprint": {
+    "pipeline_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\src\\wallpath_pi\\training\\pipeline.py",
+    "pipeline_py_md5": "b5f8b832138f6fe20b239112924d531c",
+    "pipeline_py_sha256": "769fe50feecec1266f581a4863cde9155eef2a10d12bb76bf9b6b478fd1424ea",
+    "features_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\src\\wallpath_pi\\geometry\\features.py",
+    "features_py_md5": "52a05c4d971b16e1eed986257a57186d",
+    "features_py_sha256": "a0fa378d0d6da5b66416bed8283ede0a16bf6e501ef4454d7e1411832fd9b1e5",
+    "raster_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\src\\wallpath_pi\\geometry\\raster.py",
+    "raster_py_md5": "4a5939c850e39b6368fd523b980335c8",
+    "raster_py_sha256": "af0dca9ca870da96fd6bdfc532cfd8f8eae716b83da99cbb2c8252a8a4ce0506",
+    "propagation_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\src\\wallpath_pi\\baselines\\propagation.py",
+    "propagation_py_md5": "2f484933f92665b40f028d5d1cfe890e",
+    "propagation_py_sha256": "58e6c071f6a8b071ca3aa790e930e48ae6a9b7470ae9db3827b57468e09ed50b",
+    "idw_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\src\\wallpath_pi\\baselines\\idw.py",
+    "idw_py_md5": "54b2904ab2d396f30d3b00b1997e5bac",
+    "idw_py_sha256": "8d95617b720641e7217921926ca96d8c1b19f6245dfdd757066b2677f70a604c",
+    "metrics_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\src\\wallpath_pi\\evaluation\\metrics.py",
+    "metrics_py_md5": "ba99f605092995a5a8baf947709d7bdf",
+    "metrics_py_sha256": "6b011aac68af011fdb5941f686ad493d1b99a063a1e3b11c6740a919e439f4c8",
+    "train_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\scripts\\train.py",
+    "train_py_md5": "6e18a64910bf5a5dbc44004eca8e581b",
+    "train_py_sha256": "683f24da73d6078857aab9b1689fc291fb8318260e2b8312e49cc6f9f522ea8c",
+    "evaluate_py_path": "C:\\Users\\Pankaj\\WallPath-PI\\scripts\\evaluate.py",
+    "evaluate_py_md5": "9426da541edd02733812b406959665e6",
+    "evaluate_py_sha256": "23b813f3f7a4044689731e7bc4a14a347ad41819d885cc22f26c6f4d3b0e1958"
+  },
+  "source_manifest": [
+    {
+      "path": "wallpath_pi\\__init__.py",
+      "md5": "c559a32fdb9096a6e6f79f993ea9e08d",
+      "sha256": "ed95457806dceb068b5545d27af039b74313d58fda26d4340d76e21208ab91bc",
+      "bytes": 856
+    },
+    {
+      "path": "wallpath_pi\\baselines\\__init__.py",
+      "md5": "c6c045c9d39216b34abf6de8de7936b6",
+      "sha256": "2c378f50997e63323caa072aea5bad717979314224201a144c0628305ebcbaa2",
+      "bytes": 34
+    },
+    {
+      "path": "wallpath_pi\\baselines\\idw.py",
+      "md5": "54b2904ab2d396f30d3b00b1997e5bac",
+      "sha256": "8d95617b720641e7217921926ca96d8c1b19f6245dfdd757066b2677f70a604c",
+      "bytes": 7711
+    },
+    {
+      "path": "wallpath_pi\\baselines\\propagation.py",
+      "md5": "2f484933f92665b40f028d5d1cfe890e",
+      "sha256": "58e6c071f6a8b071ca3aa790e930e48ae6a9b7470ae9db3827b57468e09ed50b",
+      "bytes": 5256
+    },
+    {
+      "path": "wallpath_pi\\data\\__init__.py",
+      "md5": "c6c045c9d39216b34abf6de8de7936b6",
+      "sha256": "2c378f50997e63323caa072aea5bad717979314224201a144c0628305ebcbaa2",
+      "bytes": 34
+    },
+    {
+      "path": "wallpath_pi\\data\\dataset.py",
+      "md5": "dfa787cd66fa651e6f5cbaac240ca1d7",
+      "sha256": "6bc9d4316cd3e0142d869b40ede5555967010338d11c078414d911cce3866ea8",
+      "bytes": 6717
+    },
+    {
+      "path": "wallpath_pi\\data\\sparse.py",
+      "md5": "ff1aa992085768fc385474a90e059c65",
+      "sha256": "d412d592a47296958b29cb6cc1f57ce578acae470a7aa65621a3fe4f9112d283",
+      "bytes": 2328
+    },
+    {
+      "path": "wallpath_pi\\data\\splits.py",
+      "md5": "9fa329ad59c38609343ef095d098c303",
+      "sha256": "3cd78be668a825b1163b26dcde7dd288d89b134537e6b40eb6ec9e753761970c",
+      "bytes": 12400
+    },
+    {
+      "path": "wallpath_pi\\data\\synthetic.py",
+      "md5": "65f37cc9ad22d2893a6c65a87905044b",
+      "sha256": "42f901390145e66c82d1a9e4b98a5c9d2cf76522013606ed21ac42168c051902",
+      "bytes": 9688
+    },
+    {
+      "path": "wallpath_pi\\evaluation\\__init__.py",
+      "md5": "c6c045c9d39216b34abf6de8de7936b6",
+      "sha256": "2c378f50997e63323caa072aea5bad717979314224201a144c0628305ebcbaa2",
+      "bytes": 34
+    },
+    {
+      "path": "wallpath_pi\\evaluation\\metrics.py",
+      "md5": "ba99f605092995a5a8baf947709d7bdf",
+      "sha256": "6b011aac68af011fdb5941f686ad493d1b99a063a1e3b11c6740a919e439f4c8",
+      "bytes": 7040
+    },
+    {
+      "path": "wallpath_pi\\experiments\\pipeline.py",
+      "md5": "73be8e16db77261f85855d3a23986712",
+      "sha256": "af5bf3eb343a86b652c34e679ee60057526e00d47fe4649de67f163fbf949363",
+      "bytes": 2296
+    },
+    {
+      "path": "wallpath_pi\\features\\__init__.py",
+      "md5": "d41d8cd98f00b204e9800998ecf8427e",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "wallpath_pi\\features\\raster.py",
+      "md5": "417a67015dad216bdbbca0bfb86da2f9",
+      "sha256": "d229e6129ef4507d6048cc172dfb8117eeac58f5ed5108611f6e6f5446d03cf4",
+      "bytes": 2984
+    },
+    {
+      "path": "wallpath_pi\\features\\sparse.py",
+      "md5": "981aae94b1ed02634bfabe248de0ecab",
+      "sha256": "9bc6cf44866caeea8aeeea1be00f7a0ed06ae9c9d41f9e8594a98f3780f4206c",
+      "bytes": 2681
+    },
+    {
+      "path": "wallpath_pi\\geometry\\__init__.py",
+      "md5": "c6c045c9d39216b34abf6de8de7936b6",
+      "sha256": "2c378f50997e63323caa072aea5bad717979314224201a144c0628305ebcbaa2",
+      "bytes": 34
+    },
+    {
+      "path": "wallpath_pi\\geometry\\cache.py",
+      "md5": "8af0d188a91a8a8304a51939166685da",
+      "sha256": "480d4c84f4e839074f7822596c8333728f8372d7d39342a5270d2c2446e0afb7",
+      "bytes": 6446
+    },
+    {
+      "path": "wallpath_pi\\geometry\\features.py",
+      "md5": "52a05c4d971b16e1eed986257a57186d",
+      "sha256": "a0fa378d0d6da5b66416bed8283ede0a16bf6e501ef4454d7e1411832fd9b1e5",
+      "bytes": 10631
+    },
+    {
+      "path": "wallpath_pi\\geometry\\raster.py",
+      "md5": "4a5939c850e39b6368fd523b980335c8",
+      "sha256": "af0dca9ca870da96fd6bdfc532cfd8f8eae716b83da99cbb2c8252a8a4ce0506",
+      "bytes": 5058
+    },
+    {
+      "path": "wallpath_pi\\models\\__init__.py",
+      "md5": "c6c045c9d39216b34abf6de8de7936b6",
+      "sha256": "2c378f50997e63323caa072aea5bad717979314224201a144c0628305ebcbaa2",
+      "bytes": 34
+    },
+    {
+      "path": "wallpath_pi\\models\\registry.py",
+      "md5": "be8c00665b52b86807ca3d58bda4ea33",
+      "sha256": "ba5ce5a01d1c5a02b6bbfd74205f0e777d3ecd2adaade5d741af53bb3a29222e",
+      "bytes": 3337
+    },
+    {
+      "path": "wallpath_pi\\physics\\__init__.py",
+      "md5": "d41d8cd98f00b204e9800998ecf8427e",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "wallpath_pi\\physics\\pathloss.py",
+      "md5": "d6df622b141a7c2abd3e77f04b33666b",
+      "sha256": "c4c4fb722060efa6b3a132445a32363256f21e93a2057a48864a4166d26579b8",
+      "bytes": 2392
+    },
+    {
+      "path": "wallpath_pi\\training\\__init__.py",
+      "md5": "c6c045c9d39216b34abf6de8de7936b6",
+      "sha256": "2c378f50997e63323caa072aea5bad717979314224201a144c0628305ebcbaa2",
+      "bytes": 34
+    },
+    {
+      "path": "wallpath_pi\\training\\pipeline.py",
+      "md5": "b5f8b832138f6fe20b239112924d531c",
+      "sha256": "769fe50feecec1266f581a4863cde9155eef2a10d12bb76bf9b6b478fd1424ea",
+      "bytes": 47804
+    },
+    {
+      "path": "wallpath_pi\\utils\\__init__.py",
+      "md5": "c6c045c9d39216b34abf6de8de7936b6",
+      "sha256": "2c378f50997e63323caa072aea5bad717979314224201a144c0628305ebcbaa2",
+      "bytes": 34
+    },
+    {
+      "path": "wallpath_pi\\utils\\config.py",
+      "md5": "125cd06d3719431752239b9e6f1aa924",
+      "sha256": "68d1ed9a3272c2ba6078d38b732a22c6f64ab019f6abe07047d239c7c2290b26",
+      "bytes": 4825
+    },
+    {
+      "path": "wallpath_pi\\utils\\hashing.py",
+      "md5": "830f6d0029263abdd554530bafe433ca",
+      "sha256": "828f99ae88b474a7a28d62b6ed393e35050d70a03e2231e73db7c3c000b00bc0",
+      "bytes": 3593
+    },
+    {
+      "path": "wallpath_pi\\utils\\paths.py",
+      "md5": "44d56d95a5f31d941ce92cf109f78c98",
+      "sha256": "600ca95152dee56a58874de1efb3cf6b41bee1cbfe30ad2ba44ad162f89a0538",
+      "bytes": 3918
+    },
+    {
+      "path": "wallpath_pi\\utils\\plotter.py",
+      "md5": "a1f55f9fee7e0c5f07dfa9c135818694",
+      "sha256": "aa8d32568b56ea61c88d0e7bfdacd53e6df1ee4ae2411686a5f2a63253a081ee",
+      "bytes": 15717
+    },
+    {
+      "path": "wallpath_pi\\utils\\run_summary.py",
+      "md5": "9b0157f2e94aa86eea592ae6917b30b6",
+      "sha256": "68f3e612cb839c169d130359429566b2a93a023523dff556fa13e027390b7dac",
+      "bytes": 4980
+    },
+    {
+      "path": "wallpath_pi\\utils\\seed.py",
+      "md5": "580e52db40a5232ff6d07233002340d9",
+      "sha256": "981f744c9760c92575e0b74caa625a3279a7812b7dcdedc23d1ba222d9e99022",
+      "bytes": 770
+    }
+  ]
+}

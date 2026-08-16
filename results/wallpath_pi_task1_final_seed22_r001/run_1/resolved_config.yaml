@@ -1,0 +1,122 @@
+paths:
+  data_root: ./data/icassp2025_indoor_converted_task1_full
+  results_root: ./results
+  cache_root: ./data/processed/cache/base_maps
+  train_csv: train_split.csv
+  val_csv: val_split.csv
+  eval_csv: val_split.csv
+dataset:
+  material_ids:
+  - 1
+  - 2
+  - 3
+  min_distance_m: 0.25
+  clip_min_db: 13.0
+  clip_max_db: 160.0
+  treat_clip_max_as_clipped: true
+  cache_features: true
+  feature_set:
+    coordinate_features: true
+    raster_wall_features: true
+    material_features: true
+    sparse_anchor_features: true
+    baseline_prediction_features: true
+    k_nearest_anchors: 4
+    idw_power: 2.0
+    idw_eps: 1.0e-06
+split:
+  group_column: scene_id
+  train_scenes:
+  - B1
+  - B2
+  - B3
+  - B4
+  - B5
+  - B6
+  - B7
+  - B8
+  - B9
+  - B10
+  - B11
+  - B12
+  - B13
+  - B14
+  - B15
+  - B16
+  - B17
+  - B18
+  - B19
+  - B20
+  val_scenes:
+  - B21
+  - B22
+  - B23
+  - B24
+  - B25
+experiment:
+  experiment_name: wallpath_pi_task1_final_seed22_r001
+  seed: 42
+train:
+  methods:
+  - log_distance
+  - multi_wall
+  - idw
+  - multi_wall_residual_idw
+  - direct_rf_geometry
+  - direct_rf_sparse_anchor
+  - direct_rf_all_features
+  - direct_extra_all_features
+  - wallpath_rf
+  - wallpath_extra
+  - wallpath_calibrated
+  primary_method: wallpath_extra
+  sparse_rates:
+  - 0.01
+  sparse_seeds:
+  - 22
+  min_anchors: 16
+  max_train_points_per_sample: 1000
+  prepare_n_jobs: 4
+  baseline_ridge_alpha: 1.0e-06
+  model_params:
+    random_forest:
+      n_estimators: 100
+      max_depth: 18
+      min_samples_leaf: 1
+      n_jobs: 4
+    extra_trees:
+      n_estimators: 150
+      max_depth: 20
+      min_samples_leaf: 1
+      n_jobs: 4
+baseline:
+  d0_m: 1.0
+  idw_power: 2.0
+  idw_eps: 1.0e-06
+  idw_query_chunk_size: auto
+evaluation:
+  metrics:
+  - rmse
+  - mae
+  - median_ae
+  - p90_ae
+  - los_rmse
+  - nlos_rmse
+  - high_wall_rmse
+  - unclipped_rmse
+  - non_anchor_rmse
+  - non_anchor_mae
+  - non_anchor_p90_ae
+  - non_anchor_los_rmse
+  - non_anchor_nlos_rmse
+  - free_space_rmse
+  - wall_region_rmse
+  high_wall_count_threshold: 2
+  export_npz: false
+  primary_sparse_rate: 0.01
+  primary_sparse_seed: 22
+  bootstrap_iterations: 100
+  bootstrap_confidence: 0.95
+system:
+  deterministic: true
+  num_threads: 1
